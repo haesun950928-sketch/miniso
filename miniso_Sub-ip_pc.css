@@ -44,8 +44,8 @@ input, select {
 웹 폰트 적용
 ========================= */
 @font-face {
-    font-family: 'Cloud'; 
-    src: url('./fonts/Cloudsofa_namgim-Regular.woff2') format('woff2'); 
+    font-family: 'Cloudsofa_namgim';
+    src: url('./fonts/Cloudsofa_namgim-Regular.ttf') format('truetype');
     font-weight: normal; 
     font-style: normal;
 }
@@ -1462,7 +1462,7 @@ main{
     background-image: none;
 
     /* 모바일 배경 이미지 추가 */
-    background-image:url(images/tablet.footer03.png);
+    background-image:url(images/tablet-footer03.png);
     background-repeat: no-repeat;
     background-size: 100%;
     transition: all 0.5s;
