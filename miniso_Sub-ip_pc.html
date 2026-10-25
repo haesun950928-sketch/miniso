@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IP Collaboration</title>
+  <link rel="stylesheet" href="miniso_Sub-ip_pc.css">
+
+
+
+  <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script>
+
+        // 헤더 제이쿼리 --------------------
+        $(document).ready(function(){
+            $("header").hover(function(){
+
+                if($(window).width() > 900){
+                    $(".header-inner").toggleClass("on");
+                    $("header").toggleClass("active");
+                }
+            });
+
+
+            // 햄버거 버튼 클릭 시 열기
+            $(".hamburger").click(function(){
+                $(".ham-menu").addClass("on");
+            });
+
+            // 닫음 
+            $(".menu-top img").click(function(){
+                $(".ham-menu").removeClass("on");
+            });
+
+        });
+        // 헤더 끝--------------------
+
+
+
+        // 서브 ip콜라보 제이쿼리 --------------------
+
+        $(document).ready(function(){
+          $(".b-next").click(function(){
+            $(".b-ip").stop().animate({"margin-left":"-820px"},500,function(){
+
+              $(".b-ip>li").first().appendTo(".b-ip")
+              $(".b-ip").css({"margin-left":"-410px"});
+            });
+          });
+          $(".b-prev").click(function(){
+            $(".b-ip").stop().animate({"margin-left":"0px"},500,function(){
+
+              $(".b-ip>li").last().prependTo(".b-ip");
+              $(".b-ip").css({"margin-left":"-410px"});
+              
+            });
+          });
+      });
+
+
+
+
+    </script>
+
+</head>
+<body>
+    <!------------header---------->
+  <header>
+        <div class="header-inner">
+            
+            <ul class="gnb">
+                <li class="gnb-sub">
+                    <a href="miniso_Sub-ip_pc.html">IP COLLABORATION</a>
+                </li>
+                <li class="gnb-sub">
+                    <a href="#">STORE</a>
+                    <ul class="drop-gnb gnb-submenu-store">
+                        <li><a href="#">Store Image</a></li>
+                        <li><a href="#">E-shop</a></li>
+                        <li><a href="#">Global Market</a></li>
+                    </ul>
+                </li>
+
+                <li class="gnb-logo">
+                    <a href="miniso_index_pc.html">
+                        <img src="images/header-miniso-logo.png" alt="미니소 헤더 로고">
+                    </a>
+                </li>
+
+                <li class="gnb-sub">
+                    <a href="miniso_sub_brand_pc.html">BRAND</a>
+                    <ul class="drop-gnb gnb-submenu-brand">
+                        <li><a href="miniso_sub_brand_pc.html">Brand Profile</a></li>
+                        <li><a href="#">Brand News</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </li>
+
+                <li class="gnb-sub">
+                    <a href="#">Social Responsibility</a>
+                </li>
+            </ul>
+
+            <!-- 모바일용 햄버거 버튼 -->
+            <div class="ham-set">
+            <button class="hamburger">
+                <img src="images/header-hamburger.png" alt="햄버거 아이콘">
+            </button>
+
+                <!-- 타블렛&모바일 햄버거 -->
+            <div class="hm-over">
+                    <div class="ham-menu">
+                    <div class="ham-menu-inner">
+                        <div class="menu-top">
+                            <img src="images/mobile-hambuger-close-icon.png" alt="닫기버튼">
+                        </div>
+                        <ul class="ham-gnb">
+                            <li>
+                                <a href="miniso_Sub-ip_pc.html">IP COLLABORATION</a>
+                            </li>
+                            <li>
+                                <a href="#">STORE</a>
+                                <ul class="ham-sub-menu">
+                                    <li><a href="#">Store Image</a></li>
+                                    <li><a href="#">E-shop</a></li>
+                                    <li><a href="#">Global Market</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="miniso_sub_brand_pc.html">BRAND</a>
+                                <ul class="ham-sub-menu">
+                                    <li><a href="miniso_sub_brand_pc.html">Brand Profile</a></li>
+                                    <li><a href="#">Brand News</a></li>
+                                    <li><a href="#">Contact Us</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Investors</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+
+
+  </header>
+
+
+  <main>
+
+    <div class="hero">
+      <!-- 백그라운드 이미지로 배경 넣기 -->
+      <img src="images/main_chiikawa.png" alt="히어로 캐릭터">
+      <div class="h-inner">
+        <h1>IP COLLABO</h1>
+        <P>with miniso</P>
+      </div>
+    </div>
+
+    <section class="cont1">
+      <!-- 백그라운드 이미지로 배경 넣기 -->
+      <div class="bg">
+        <img src="images/main_sticker01.png" alt="풀장식1">
+        <img src="images/main_sticker02.png" alt="풀장식2">
+      </div>
+
+      <div class="c-wrap">
+        <h2>miniso <span>and</span> Chiikawa</h2>
+        <h4>Adorably cute, bursting with energy</h4>
+        <p>
+          미니소와 치이카와가 힘을 합쳤다.<br>
+          많은 젊은이들이 사랑하는 감성적인 동반자 치이카와를 소개합니다.<br>
+          지금 미니소 치이카와 컬렉션을 확인하고 독특하고 사랑스러운 디자인 중에서 골라보세요.<br>
+          부드러운 봄바람 속에서 미니소의 귀엽고 매력적인 치이카와와 제품들이 당신의 하루를 환하게 밝혀줄 거예요!
+        </p>
+      </div>
+
+      <div class="item-all">
+        <h3>Pick your items!</h3>
+
+        <ul class="i-number">
+          <li><img src="images/items_nub.png" alt="아이템 숫자"><span>01</span></li>
+          <li><img src="images/items_nub.png" alt="아이템 숫자"><span>02</span></li>
+          <li><img src="images/items_nub.png" alt="아이템 숫자"><span>03</span></li>                    
+        </ul>
+
+        <ul class="i-items">
+          <li><img src="images/items_01.png" alt="카메라"></li>
+          <li><img src="images/items_02.png" alt="쿠키"></li>
+          <li><img src="images/items_03.png" alt="별"></li>   
+
+          <img class="i-chii" src="images/items_04.png" alt="아이템박스 스티커">
+        </ul>
+
+        <ul class="c-btn">
+          <li>
+            <a href="miniso_Sub-view_pc.html"><img class="b-default" src="images/miniso_coll_btn01.png" alt="치이카와 버튼1"></a>
+            <a href="miniso_Sub-view_pc.html"><img class="b-hover" src="images/miniso_coll_btn02.png" alt="치이카와 버튼2"></a>
+            <a href="miniso_Sub-view_pc.html"><span>chiikawa more</span></a>
+
+            <img class="btn-d" src="images/btn_chiikawa_01.png" alt="버튼장식1">
+            <img class="btn-h" src="images/btn_chiikawa_02.png" alt="버튼장식2">
+          </li>
+        </ul>
+
+      </div>
+    </section>
+
+
+
+    <section class="cont2">
+      <!-- 백그라운드 이미지로 배경 넣기 -->
+      <div class="best-wrap">
+        <ul class="b-txt">
+          <li>Miniso’s Choice</li>
+          <li><h3>BEST IP Collaboration</h3></li>
+          <li>Collection</li>
+        </ul>
+          <!-- ------------캐러셀효과적용----------- -->
+        <div class="best-inner">
+          <div class="best-ip">
+            <ul class="b-ip">
+
+              <li class="b-peanuts">
+                <p>PEANUTS</p>
+                <a class="ip-link" href="#">BEST PEANUTS</a>
+              </li>
+
+              <li class="b-loopy">
+                <p>LOOPY</p>
+                <a class="ip-link" href="#">BEST LOOPY</a>
+              </li>
+
+              <li class="b-chii">
+                <p>CHIIKAWA</p>
+                <a class="ip-link" href="miniso_Sub-view_pc.html">BEST CHIIKAWA</a>
+              </li>
+
+              <li class="b-stitch">
+                <p>STITCH</p>
+                <a class="ip-link" href="#">BEST STITCH</a>
+              </li>
+
+              <li class="b-bt21">
+                <p>BT21</p>
+                <a class="ip-link" href="#">BEST BT21</a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+
+      </div>
+      <ul class="next">
+        <!-- 백그라운드 이미지로 버튼배경 넣기 -->
+        <li class="b-prev"><img src="images/prev.png" alt="prev"></li>
+        <li class="b-next"><img src="images/next.png" alt="next"></li>
+      </ul>
+    </section>
+
+    <section class="cont3">
+      
+      <div class="loopy">
+        <!-- 백그라운드 이미지로 루피 배경 넣기 -->
+        <div class="coll-txt">
+          <h2>MINISO IP COLLABO</h2>
+          <img src="images/miniso_logo.png" alt="미니소로고2">
+        </div>
+    
+        <div class="l-wrap">
+          <div class="l-left">
+            <img class="l-t1" src="images/pink_sticker.png" alt="테이프장식">
+            <img class="l-t2" src="images/pink_sticker.png" alt="테이프장식">
+            <img class="l-sticker1" src="images/loopy01.png" alt="루피스티커1">
+            <img class="l-logo" src="images/01_logo.png" alt="루피로고">
+            <p>
+              MINISO × 잔망 루피 컬렉션<br>
+              다재다능한 잔망 루피, 끝없는 행복<br>
+              새로 출시된 제품으로 일상에 사랑스러운<br> 
+              장난기 가득한 분위기를 더해보세요~!
+            </p>
+            <div class="btn-area">
+              <a class="btn1" href="#">Learn more</a> 
+            </div>          
+          </div>
+
+          <div class="l-right">
+            <img class="l-box2" src="images/ip_box_01.png" alt="루피콜라보">
+
+            <img class="l-sticker2" src="images/loopy02.png" alt="루피스티커2">
+          </div>
+        </div>
+
+      </div>
+
+      <div class="peanuts">
+        <div class="p-wrap">
+          <div class="p-left">
+            <img class="p-box" src="images/ip_box_02.png" alt="스누피콜라보">
+            <img class="p-s1" src="images/peanuts02.png" alt="스누피스티커2">
+          </div>
+
+          <div class="p-right">
+            <img class="p-s2" src="images/peanuts01.png" alt="스누피스티커1">
+            <img class="p-logo" src="images/02_logo.png" alt="스누피로고">
+            <p>
+              미니소 × 스누피 컬렉션<br>
+              사랑스러운 스누피와 함께 일상 속 순간을 더 다채롭게<br>
+              작은 기쁨을 더해보세요.
+            </p>
+            <div class="btn-area">
+              <a class="btn2" href="#">Learn more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stitch">
+        <img class="s-s1" src="images/stitch_02.png" alt="스티치스티커2">
+        <div class="s-wrap">
+
+          <div class="s-left">
+            <img class="s-logo" src="images/03_logo.png" alt="스티치로고">
+            <p>
+              미니소 × 스티치 컬렉션<br>
+              장난기 가득한 장식이 부드러운 분위기를 만들어 줍니다.<br>
+              따뜻한 경험에 푹 빠져보세요.
+            </p>
+            <div class="btn-area">
+              <a class="btn3" href="#">Learn more</a>
+            </div>
+            
+          </div>
+
+          <div class="s-right">
+            <img class="s-s2" src="images/stitch_01.png" alt="스티치스티커1">
+            <img class="s-box" src="images/ip_box_03.png" alt="스티치콜라보">
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+
+
+
+
+  </main>
+
+
+
+
+
+  <footer class="f-all">
+    <div class="f-bg">
+
+
+      <div class="f-wrap">
+        <div class="f-main">
+
+          <div class="f-brand">
+            <img src="images/footer_logo.png" alt="푸터로고">
+            <div class="f-contact">
+              <p>Franchise Inquiries</p>
+              <p class="email">Franchise@miniso.com</p>
+            </div>
+          </div>
+
+
+          <div class="f-inner">
+            <ul class="f-menu">
+
+              <li>
+                <a href="#">IP Collaboration</a>
+              </li>
+              <li>
+                <a href="#">Brand</a>
+                <ul class="f-sub">
+                  <li><a href="#">Brand Profile</a></li>
+                  <li><a href="#">News</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#">Store</a>
+                <ul class="f-sub">
+                  <li><a href="#">Store Image</a></li>
+                  <li><a href="#">E-Shop</a></li>
+                  <li><a href="#">Global Market</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#">Social Responsibility</a>
+                <ul class="f-sub">
+                  <li>
+                    <a href="#">Investors</a>
+                  </li>
+                </ul>
+              </li>
+
+
+            </ul>
+          </div>
+
+        </div>
+        <div class="copy">
+          <p>Privacy Policy | Copyright © 2026 MINISO(GUANGZHOU)Co.</p>
+        </div>
+        
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+  </footer>
+  <!-- <script>
+  // 새로고침 시 이전 스크롤 위치를 자동 복원하지 않기
+  history.scrollRestoration = "manual";
+
+  // 페이지가 표시되면 맨 위로 이동
+  window.addEventListener("pageshow", function(){
+  window.scrollTo(0, 0);
+  });
+</script> -->
+  <!-- <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+  <script>
+
+
+
+
+  </script> -->
+</body>
+</html>

@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>miniso IP Collaboration Detail View</title>
+    <link rel="stylesheet" href="miniso_Sub-view_pc.css">
+
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script>
+    $(document).ready(function () {
+
+
+            // 헤더 제이쿼리 --------------------
+        $(document).ready(function(){
+            $("header").hover(function(){
+
+                if($(window).width() > 900){
+                    $(".header-inner").toggleClass("on");
+                    $("header").toggleClass("active");
+                }
+            });
+
+
+            // 햄버거 버튼 클릭 시 열기
+            $(".hamburger").click(function(){
+                $(".ham-menu").addClass("on");
+            });
+
+            // 닫음 
+            $(".menu-top img").click(function(){
+                $(".ham-menu").removeClass("on");
+            });
+
+        });
+        // 헤더 끝--------------------
+
+
+        // ----------Character view 슬라이드 한칸씩 넘기기------------
+            // 캐릭터 한 칸의 이동 거리 계산
+            let first = $(".character-list > li")[0];
+            let second = $(".character-list > li")[1];
+
+            let moveWidth = second.offsetLeft - first.offsetLeft;
+
+            // 캐릭터 목록과 보이는 영역
+            let $slide = $(".character-slide");
+            let $list = $(".character-list");
+
+            // prev 별 버튼 클릭
+            $(".cha-button-prev").click(function () {
+
+                let current = $slide.scrollLeft();
+                let target = Math.max(0, current - moveWidth);
+
+                $slide.stop().animate({scrollLeft: target}, 500);
+
+            });
+
+            // next 별 버튼 클릭
+            $(".cha-button-next").click(function () {
+
+                let current = $slide.scrollLeft();
+                let maxScroll = $list.outerWidth(true) - $slide.innerWidth();
+
+                // 최대 위치를 넘지 않도록 제한
+                let target = Math.min(maxScroll, current + moveWidth);
+
+                $slide.stop().animate({scrollLeft: target}, 500);
+
+            });
+        // ---------------------------------------------
+
+        // -----------Collaboration 안내 이미지 캐러셀 활용!----------------
+            const slides = document.querySelector(".collabo-slide"); 
+            const nextBtn = document.querySelector(".collabo-next");
+
+            let index = 0;
+            const count = slides.children.length;
+
+            nextBtn.addEventListener("click", function(){
+                index = (index + 1) % count;
+
+                const moveWidth = slides.parentElement.clientWidth;
+
+                slides.style.transform = `translateX(-${index * moveWidth}px)`;
+            });
+        });
+
+        
+    </script>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            
+            <ul class="gnb">
+                <li class="gnb-sub">
+                    <a href="miniso_Sub-ip_pc.html">IP COLLABORATION</a>
+                </li>
+                <li class="gnb-sub">
+                    <a href="#">STORE</a>
+                    <ul class="drop-gnb gnb-submenu-store">
+                        <li><a href="#">Store Image</a></li>
+                        <li><a href="#">E-shop</a></li>
+                        <li><a href="#">Global Market</a></li>
+                    </ul>
+                </li>
+
+                <li class="gnb-logo">
+                    <a href="miniso_index_pc.html">
+                        <img src="images/header-miniso-logo.png" alt="미니소 헤더 로고">
+                    </a>
+                </li>
+
+                <li class="gnb-sub">
+                    <a href="miniso_sub_brand_pc.html">BRAND</a>
+                    <ul class="drop-gnb gnb-submenu-brand">
+                        <li><a href="miniso_sub_brand_pc.html">Brand Profile</a></li>
+                        <li><a href="#">Brand News</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </li>
+
+                <li class="gnb-sub">
+                    <a href="#">Social Responsibility</a>
+                </li>
+            </ul>
+
+            <!-- 모바일용 햄버거 버튼 -->
+            <div class="ham-set">
+            <button class="hamburger">
+                <img src="images/header-hamburger.png" alt="햄버거 아이콘">
+            </button>
+
+                <!-- 타블렛&모바일 햄버거 -->
+            <div class="hm-over">
+                    <div class="ham-menu">
+                    <div class="ham-menu-inner">
+                        <div class="menu-top">
+                            <img src="images/mobile-hambuger-close-icon.png" alt="닫기버튼">
+                        </div>
+                        <ul class="ham-gnb">
+                            <li>
+                                <a href="miniso_Sub-ip_pc.html">IP COLLABORATION</a>
+                            </li>
+                            <li>
+                                <a href="#">STORE</a>
+                                <ul class="ham-sub-menu">
+                                    <li><a href="#">Store Image</a></li>
+                                    <li><a href="#">E-shop</a></li>
+                                    <li><a href="#">Global Market</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="miniso_sub_brand_pc.html">BRAND</a>
+                                <ul class="ham-sub-menu">
+                                    <li><a href="miniso_sub_brand_pc.html">Brand Profile</a></li>
+                                    <li><a href="#">Brand News</a></li>
+                                    <li><a href="#">Contact Us</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Investors</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+
+
+    </header>
+
+
+
+
+
+
+
+
+
+
+
+    <main>
+
+
+        <!-- 상단 히어로 이미지 -->
+        <section class="sub-hero">
+            <img src="images/Sub-top-visual.png" alt="히어로-비주얼-이미지">
+        </section>
+
+
+        <!-- 미니소X치이카와 콜라보 소개 글 -->
+        <section class="subview-intro">
+
+
+            <div class="intro-inner">
+
+                <div class="intro-txt">
+
+                    <h1><span>MINISO</span> X Chiikawa<br>Collection</h1>
+
+                    <p>
+                        산들바람과 함께 찾아온 봄의 서막, <br>
+                        약속이라도 한 듯 등장한 ‘먼가 작고 귀여운 녀석들’ <br>
+                        사랑스러운 얼굴에 거부할 수 없는 귀여움과 시선을 사로잡는 매력을 가진 먼작귀들은 <br>
+                        많은 젊은이들에게 '위안을 주는 친구'로 사랑받고 있습니다.
+                    </p>
+                </div>
+
+                
+
+
+                <img src="images/sub-back-L-cloud.png" alt="큰구름">
+                <img src="images/sub-back-m-cloud.png" alt="중간구름">
+                <img src="images/sub-back-s-cloud.png" alt="소구름">
+                <img src="images/sub-back-xs-cloud.png" alt="최소구름">
+            </div> 
+
+
+        </section>
+
+
+
+        
+        <!-- 백그라운드 이미지 끼우기 위한 div-->
+        <div class="Sub-main-Bg">
+            
+            <!-- 메인 작업 -->
+            <div class="main-inner"> 
+                
+                <!-- 캐릭터 뷰 -->
+                <section class="character">
+
+                    <div class="character-inner">
+                        <!--  나비 -->
+                        <div class="fly motion-fly">
+                            <img src="images/motion-butterfly.png" alt="애니메이션 나비">
+                        </div>
+
+                        <div class="fly motion-fly02">
+                            <img src="images/motion-butterfly.png" alt="애니메이션 나비">
+                        </div>
+
+                        <div class="ch-title">
+                            <h2>Character view</h2>
+                        </div>
+
+                    </div>
+
+
+
+                    
+
+                        <!-- 캐릭터 뷰 이미지 -->
+                        <div class="character-slide">
+
+
+                            <!-- 별 버튼 -->
+                            <p class="cha-button-prev">
+                                <img src="images/sub-character-prev.png" alt="prev 버튼 별">
+                            </p>
+
+                            <p class="cha-button-next">
+                                <img src="images/sub-character-next.png" alt="next 버튼 별">
+                            </p>
+                    
+
+                            <div class="Carousel">
+                                <ul class="character-list">
+                                    <li>
+                                        <img src="images/sub-character-chiikawa.png" alt="치이카와">
+                                        <p>CHIIKAWA</p>
+                                    </li>
+                                    <li>
+                                        <img src="images/sub-character-hachiware.png" alt="하치와레">
+                                        <p>HACHIWARE</p>
+                                    </li>
+                                    <li>
+                                        <img src="images/sub-character-usagi.png" alt="우사기">
+                                        <p>USAGI</p>
+                                    </li>
+                                    <li>
+                                        <img src="images/sub-character-momonga.png" alt="모몽가">
+                                        <p>MOMONGA</p>
+                                    </li>
+                                    <li>
+                                        <img src="images/sub-character-kurimanju.png" alt="쿠리만쥬">
+                                        <p>KURIMANJU</p>
+                                    </li>
+                                    <li>
+                                        <img src="images/sub-character-rakko.png" alt="랏코">
+                                        <p>RAKKO</p>
+                                    </li>
+                                    <li>
+                                        <img src="images/sub-character-shisa.png" alt="시사">
+                                        <p>SHISA</p>
+                                    </li>
+                                    <li>
+                                        <img src="images/sub-character-kani.png" alt="카니">
+                                        <p>FURUHONYA</p>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                </section>
+
+
+
+
+
+
+                <section>
+                    <!-- 콜라보레이션 -->
+                        <div class="collabo-inner">
+
+                            <div class="collabo-txt">
+
+                                <div>
+                                    <h2>Collaboration</h2>
+                                </div>
+
+                                <p>
+                                    귀엽고 포근한 매력 덩어리들이 미니소에 상륙하다.<br>
+                                    거부할 수 없을 만큼 부드럽고 말랑말랑한 촉감부터<br>
+                                    일상에 힐링을 선사하는 작은 단짝 친구가 되어주기까지,<br>
+                                    힐링이 필요한 사람들의 마음을 사로잡는 귀염둥이들! 
+                                </p>
+
+                            </div>
+
+                            <div class="collabo-slide-box">
+
+                                <ul class="collabo-slide">
+
+                                    <li>
+                                        <img src="images/Sub-IP-collabo-detail-slide01.png" alt="슬라이드1">
+                                    </li>
+
+                                    <li>
+                                        <img src="images/Sub-IP-collabo-detail-slide02.png" alt="슬라이드2">
+                                    </li>
+                                </ul>
+
+                                <img class="collabo-next" src="images/collabo-slide-button-next.png" alt="슬라이드 버튼">
+                            </div>
+
+                        </div>
+
+                </section>
+
+                
+
+
+
+                <!-- 대표제품 3개 -->
+
+
+                <!--  케이스   -->
+                <section class="ip-product">
+                    
+                    <div class="ip-product-inner">
+
+
+
+                        <!-- 나비... -->
+                        <div class=" fly bottom-motion-fly">
+                            <img src="images/motion-butterfly.png" alt="애니메이션 나비">
+                        </div>
+
+                        <div class=" fly bottom-motion-fly02">
+                            <img src="images/motion-butterfly.png" alt="애니메이션 나비">
+                        </div>
+                        
+
+
+
+
+
+                        <div class="product pro01">
+
+                            <img class="pro-img" src="images/Sub-IP-collabo-detail-product01-defult.png" alt="제품 이미지 1">
+                            <img class="hover-img" src="images/Sub-IP-collabo-detail-product01-hover.png" alt="제품 이미지 1 hover">
+
+
+                            <div class="collabo-txt">
+
+                            
+                                    <div>
+                                        <h2>Plush Pencil Case</h2>
+                                    </div>
+                                
+                                
+                                    <p>
+                                        부드럽고 독특하고 귀여운 디자인<br>
+                                        말랑말랑한 촉감으로 스트레스 해소까지,<br>
+                                        필요한 모든 물건을 담을 수 있는 수납력.<br> 
+                                        귀여운 케이스로 일상을 깔끔하게 정리해요
+                                    </p>
+                                
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- 가방 -->
+                        
+                        <div class="product pro02">
+
+                            <div class="collabo-txt">
+
+                                <div>
+                                    <h2>Plush Crossbody Bag</h2>
+                                </div>
+                                
+                                <p>
+                                    부드럽고 사랑스러운, 포근한 여행 동반자로서<br> 
+                                    부드러운 촉감과 사랑스러운 디자인과<br>
+                                    넉넉한 내부 수납공간이 있는<br>
+                                    스타일리시하면서도 실용적인 여행 아이템.
+                                </p>
+                                
+                            </div>
+
+                            <img class="pro-img" src="images/Sub-IP-collabo-detail-product02-defult.png" alt="제품 이미지 2">
+                            <img class="hover-img" src="images/Sub-IP-collabo-detail-product02-hover.png" alt="제품 이미지 2 hover">
+                        </div>
+
+                        <!--  선풍기 -->
+
+                        <div class="product pro03">
+
+                            <img class="pro-img" src="images/Sub-IP-collabo-detail-product03-defult.png" alt="제품 이미지 3">
+                            <img class="hover-img" src="images/Sub-IP-collabo-detail-product03-hover.png" alt="제품 이미지 3 hover">
+                            
+
+                            <div class="collabo-txt">
+                                <div>
+                                    <h2>Mini Handheld Fan</h2>
+                                </div>
+                            
+                                    <p>
+                                        사랑스러우면서도 시원한, 기분 좋은 바람과<br> 
+                                        손에 딱 들어오는 사이즈로 가볍고 상쾌하게.<br> 
+                                        7엽 날개 터보로 강력하고 안정적인 바람<br> 
+                                        언제 어디서나 최고의 시원함을 느껴요.
+                                    </p>
+                                
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 최하단 cta 버튼 -->
+                <div class="cta-area">
+                    <button class="eshop-cta">
+                        <a href="#">Let's go, miniso E-shop!</a>
+                    </button>
+                    <div class="motion-flower"><img src="images/motion-flower.png" alt="애니메이션 꽃"></div>
+                    <div class="motion-flower02"><img src="images/motion-flower2.png" alt="애니메이션 꽃2"></div>
+                </div>
+
+
+            </div>
+        </div>
+    </main>
+
+
+
+
+    <!-- ----------------------- footer -------------------------- -->
+    <footer class="f-all">
+        <div class="f-bg">
+
+
+        <div class="f-wrap">
+            <div class="f-main">
+
+            <div class="f-brand">
+                <img src="images/footer_logo.png" alt="푸터로고">
+                <div class="f-contact">
+                <p>Franchise Inquiries</p>
+                <p class="email">Franchise@miniso.com</p>
+                </div>
+            </div>
+
+
+            <div class="f-inner">
+                <ul class="f-menu">
+
+                <li>
+                    <a href="#">IP Collaboration</a>
+                </li>
+                <li>
+                    <a href="#">Brand</a>
+                    <ul class="f-sub">
+                    <li><a href="#">Brand Profile</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Contact</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#">Store</a>
+                    <ul class="f-sub">
+                    <li><a href="#">Store Image</a></li>
+                    <li><a href="#">E-Shop</a></li>
+                    <li><a href="#">Global Market</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#">Social Responsibility</a>
+                    <ul class="f-sub">
+                    <li>
+                        <a href="#">Investors</a>
+                    </li>
+                    </ul>
+                </li>
+
+
+                </ul>
+            </div>
+
+            </div>
+            <div class="copy">
+            <p>Privacy Policy | Copyright © 2026 MINISO(GUANGZHOU)Co.</p>
+            </div>
+            
+        </div>
+        </div>
+
+
+
+
+    </footer>
+</body>
+</html>

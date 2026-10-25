@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>brandprofile</title>
+
+    <link rel="stylesheet" href="miniso_sub-brand_pc.css">
+    
+
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script>
+
+        // 헤더 제이쿼리 --------------------
+        $(document).ready(function(){
+            $("header").hover(function(){
+
+                if($(window).width() > 1024){
+                    $(".header-inner").toggleClass("on");
+                    $("header").toggleClass("active");
+                }
+            });
+
+
+            // 햄버거 버튼 클릭 시 열기
+            $(".hamburger").click(function(){
+                $(".ham-menu").addClass("on");
+            });
+
+            // 닫음 
+            $(".menu-top img").click(function(){
+                $(".ham-menu").removeClass("on");
+            });
+
+        });
+        // 헤더 끝--------------------
+    </script>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            
+            <ul class="gnb">
+                <li class="gnb-sub">
+                    <a href="miniso_Sub-ip_pc.html">IP COLLABORATION</a>
+                </li>
+                <li class="gnb-sub">
+                    <a href="#">STORE</a>
+                    <ul class="drop-gnb gnb-submenu-store">
+                        <li><a href="#">Store Image</a></li>
+                        <li><a href="#">E-shop</a></li>
+                        <li><a href="#">Global Market</a></li>
+                    </ul>
+                </li>
+
+                <li class="gnb-logo">
+                    <a href="miniso_index_pc.html">
+                        <img src="images/header-miniso-logo.png" alt="미니소 헤더 로고">
+                    </a>
+                </li>
+
+                <li class="gnb-sub">
+                    <a href="miniso_sub_brand_pc.html">BRAND</a>
+                    <ul class="drop-gnb gnb-submenu-brand">
+                        <li><a href="miniso_sub_brand_pc.html">Brand Profile</a></li>
+                        <li><a href="#">Brand News</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </li>
+
+                <li class="gnb-sub">
+                    <a href="#">Social Responsibility</a>
+                </li>
+            </ul>
+
+            <!-- 모바일용 햄버거 버튼 -->
+            <div class="ham-set">
+            <button class="hamburger">
+                <img src="images/header-hamburger.png" alt="햄버거 아이콘">
+            </button>
+
+                <!-- 타블렛&모바일 햄버거 -->
+            <div class="hm-over">
+                    <div class="ham-menu">
+                    <div class="ham-menu-inner">
+                        <div class="menu-top">
+                            <img src="images/mobile-hambuger-close-icon.png" alt="닫기버튼">
+                        </div>
+                        <ul class="ham-gnb">
+                            <li>
+                                <a href="miniso_Sub-ip_pc.html">IP COLLABORATION</a>
+                            </li>
+                            <li>
+                                <a href="#">STORE</a>
+                                <ul class="ham-sub-menu">
+                                    <li><a href="#">Store Image</a></li>
+                                    <li><a href="#">E-shop</a></li>
+                                    <li><a href="#">Global Market</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="miniso_sub_brand_pc.html">BRAND</a>
+                                <ul class="ham-sub-menu">
+                                    <li><a href="miniso_sub_brand_pc.html">Brand Profile</a></li>
+                                    <li><a href="#">Brand News</a></li>
+                                    <li><a href="#">Contact Us</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Investors</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+
+
+    </header>
+    <main>
+        <div class="main-hero">
+            <img src="images/brandprofile.jpg" alt="브랜드프로필사진">
+            <a href="#"><img src="images/more_btn_red.png" alt="더보기버튼"></a>
+        </div>
+        <div class="brand-intro">
+            <div class="brand-slogan">
+
+                <img class="bubble" src="images/bubble.png" alt="말풍선">
+
+                <h1>Life is for fun.</h1>
+
+                <h2>To Become the World's Leading IP Operation Platform</h2>
+                
+                <div class="logo-wrap">
+
+                    <img class="miniso-logo" src="images/MINISO_logo.png" alt="미니소로고">
+
+                    <p>미니소 창립자 예궈푸는 2013년 가족과 함께한 해외여행에서 미니소의 영감을 얻었습니다.<br>
+                        여행 중 방문한 여러 전문 매장에서는 품질과 디자인이 뛰어나면서도 가격이 저렴한 제품들<br>
+                        을 판매하고 있었고, 대부분은 중국에서 생산된 제품이었습니다.<br><br>
+                        유통업에 대한 열정과 성장 가능성에 대한 믿음을 바탕으로, <br>
+                        예궈푸는 <b>‘글로벌 IP 컬렉션 스토어’</b> 미니소를 설립했습니다. 애플, 아마존, 구글처럼<br> 
+                        혁신을 이끈 기업들과 마찬가지로, 미니소도 10년 전 광저우의 한 차고에서 시작되었습니다.
+                    </p>
+                </div>
+                <img class="show-btn" src="images/showall_btn.png" alt="showall버튼">
+                <img class="hover-show-btn" src="images/hover_show_btn.png" alt="호버">
+            </div>
+
+
+            <div class="brand-origin">
+                <img class="brand-origin-title" src="images/brandorigintitle.png" alt="브랜드오리진타이틀">
+                <div class="brand-symbols">
+                    <div class="symbol-item">
+                        <div class="symbol-img">
+                            <img src="images/circle1.png" alt="로고1">
+                            <img src="images/hover_simbol1.png" alt="호버1">
+                        </div>
+                        <h2>The Origin of <span>MINISO</span></h2>
+                        <p>
+                            미니소는 좋은 디자인과 믿을 수 있는 품질의<br>
+                            제품을 합리적인 가격에 제공해, 일상을<br>
+                            다채롭게 만들 라이프 스타일을 제안합니다.<br>
+                            누구나 부담 없이 다양한 생활용품을 즐기며 <br>
+                            자신만의 일상을 가꿀 수 있도록 합니다.
+                        </p>
+                    </div>
+
+                    
+                    <div class="symbol-item">
+                        <div class="symbol-img">
+                            <img src="images/circle2.png" alt="로고2">
+                            <img src="images/hover_simbol2.png" alt="호버2">
+                        </div>
+                        <h2>Meaning of Symbols</h2>
+                        <p>
+                            미니소의 로고는 쇼핑백에서 영감을 받아<br>
+                            심플하고 세련된 심볼로 완성되었습니다. <br>
+                            한눈에 알아볼 수 있는 형태로 오래 기억에 <br>
+                            남는 인상을 줍니다.
+                        </p>
+                    </div>
+                    <div class="symbol-item">
+                        <div class= symbol-img>
+                            <img src="images/circle3.png" alt="로고3">
+                            <img src="images/hover_simbol3.png" alt="호버3">
+                        </div>
+                        <h2>Meaning of Symbols</h2>
+                        <p>
+                            윙크하며 웃는 표정은 고객에게 편안하고<br>
+                            즐거운 일상을 선사하려는 미니소의 마음이<br>
+                            담겨 있습니다. 보기 좋고 재미있으며<br>
+                            일상 속 작은 놀라움을 전하고, <br>
+                            누구나 더 나은 삶을 누릴 수 있도록 합니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="brand-history">
+            <img src="images/dev_title.png" alt="development로고">
+                <ul class="history-group history-group1">
+                    <li>
+                        <h3 class="history-date">
+                            November 2013
+                        </h3>
+                        <p class="history-text">
+                            미니소의 첫 쇼핑몰 매장이 광저우 차이나 플라자에 문을 열었습니다.
+                        </p>
+                    </li>
+                    <li>
+                        <h3 class="history-date">
+                            August 2014
+                        </h3>
+                        <p class="history-text">
+                            미니소는 중국여성발전기금회(CWDF)와 함께 지진 피해를 입은 윈난성 루뎬 지역에<br> 
+                            음료와 쿠키 등 10만 위안 상당의 구호물품을 기부하며 따뜻한 마음을 전했습니다.
+                        </p>
+                    </li>
+                    <li>
+                        <h3 class="history-date">
+                            April 2015
+                        </h3>
+                        <p class="history-text">
+                            미니소는 2015년 광둥성 체인스토어 산업 콘퍼런스에서<br>
+                            ‘2014년 따뜻한 나눔 실천 기업’상을 수상했습니다.
+                        </p>
+                    </li>
+                </ul>
+                <ul class="history-group history-group2">
+                    <li>
+                        <h3 class="history-date">
+                            April 23, 2015
+                        </h3>
+                        <p class="history-text">
+                            미니소는 제117회 캔톤페어에 처음 참가하고,<br>
+                            PDC 및 무역 상공회의소들과 함께 ‘디자인 나이트’를 공동 개최했습니다.
+                        </p>
+                    </li>
+                    <li>
+                        <h3 class="history-date">
+                            April 13, 2016
+                        </h3>
+                        <p class="history-text">
+                            미니소는 홍콩 컨벤션·전시센터에서 열린 홍콩 전자박람회에 참가했습니다.
+                        </p>
+                    </li>
+                </ul>
+                <ul class="history-group history-group3">
+                    <li>
+                        <h3 class="history-date">
+                            February 24, 2017
+                        </h3>
+                        <p class="history-text">
+                            미니소는 인도네시아, 네팔, 두바이, 싱가포르, 필리핀 등<br>
+                            5개국에 7개 매장을 오픈했습니다.
+                        </p>
+                    </li>
+                    <li>
+                        <h3 class="history-date">
+                            February 28, 2017
+                        </h3>
+                        <p class="history-text">
+                            미니소는 세 개 매장을 동시에 오픈하며 튀르키예에 진출했고,<br>
+                            많은 고객들의 관심을 모았습니다.
+                        </p>
+                    </li>
+                    <li>
+                        <h3 class="history-date">
+                            April 17, 2018
+                        </h3>
+                        <p class="history-text">
+                            브라질에서 투자 설명회를 개최했습니다.
+                        </p>
+                    </li>
+                </ul>
+                <ul class="history-group history-group4">
+                    <li>
+                        <h3 class="history-date">
+                            February 2018
+                        </h3>
+                        <p class="history-text">
+                            미니소의 제품 4종이 2018년 iF 디자인 어워드를 수상했습니다.
+                        </p>
+                    </li>
+                    <li>
+                        <h3 class="history-date">
+                            March 13, 2019
+                        </h3>
+                        <p class="history-text">
+                            미니소는 4개국 기업과 협력 계약을 체결하고,<br>
+                            전 세계 86개 국가 및 지역으로 사업을 확대했습니다.
+                        </p>
+                    </li>
+                </ul>
+                <ul class="history-group history-group5">
+                    <li>
+                        <h3 class="history-date">
+                            August 18, 2020
+                        </h3>
+                        <p class="history-text">
+                            미니소는 2020년 7월 몰타에 첫 매장을 열었으며,<br> 
+                            개점식에는 로버트 아벨라 총리가 참석했습니다.
+                        </p>
+                    </li>
+                    <li>
+                        <h3 class="history-date">
+                            October 11, 2021
+                        </h3>
+                        <p class="history-text">
+                            미니소가 9월 24일, 아랍에미리트 두바이몰에 새로운 플래그십 스토어를 열었습니다.<br>
+                            아랍에미리트의 대표적인 쇼핑몰에 자리한 이 매장은 387㎡ 규모로,<br>
+                            개점 첫날 새로운 매출 기록을 세웠습니다.
+                        </p>
+                    </li>
+                </ul>
+                <ul class="history-group history-group6">
+                    <li>
+                        <h3 class="history-date">
+                            July 1, 2022
+                        </h3>
+                        <p class="history-text">
+                            7월 1일, 라이프스타일 브랜드 미니소는 런던 웨스트필드에 플래그십 스토어를<br> 
+                            개점하며, 영국 소비자들에게 합리적인 가격의 즐거운 제품들을 선보였습니다.
+                        </p>
+                    </li>
+                    <li>
+                        <h3 class="history-date">
+                            February 27, 2022
+                        </h3>
+                        <p class="history-text">
+                            미니소가 2월 26일 뉴욕에 플래그십 스토어를 열었습니다.
+                        </p>
+                    </li>
+                </ul>
+                <ul class="history-group history-group7">
+                    <li>
+                        <h3 class="history-date">
+                            March 15, 2023
+                        </h3>
+                        <p class="history-text">
+                            미니소는 2023 글로벌 전략 파트너 서밋에서 해외 3개 시장으로 진출을 확대하고,<br>
+                            4개국의 대리점 파트너와 계약을 체결했습니다.
+                        </p>
+                    </li>
+                    <li>
+                        <h3 class="history-date">
+                            May 4, 2024
+                        </h3>
+                        <p class="history-text">
+                            베트남에 첫 IP 컬렉션 스토어를 열어, 쇼핑에 즐거움과 색다른 재미를 더했습니다.
+                        </p>
+                    </li>
+                    <li>
+                        <h3 class="history-date">
+                            March 30, 2024
+                        </h3>
+                        <p class="history-text">
+                            미니소가 3월 30일, 쿠알라룸푸르의 버자야 타임스 스퀘어 쇼핑몰에 말레이시아<br>
+                            첫 IP 컬렉션 스토어를 열었습니다.
+                        </p>
+                    </li>
+                </ul>
+                <ul class="history-group history-group8">
+                    <li>
+                        <h3 class="history-date">
+                            January 23, 2024
+                        </h3>
+                        <p class="history-text">
+                            글로벌 라이프스타일 브랜드 미니소가 홍콩 침사추이에<br> 
+                            새로운 플래그십 스토어를 열었습니다.
+                        </p>
+                    </li>
+                    <li>
+                        <h3 class="history-date">
+                            February 7, 2025
+                        </h3>
+                        <p class="history-text">
+                            미니소 미국은 2024년 회원 수가 250% 증가해 약 200만 명에 도달한 데 이어,<br>
+                            2025년 1월 멤버십 프로그램을 새롭게 개선했습니다.
+                        </p>
+                    </li>
+                </ul>
+        </div>
+
+
+
+        <div class="disign-team">
+            <img class="disign-title" src="images/disign_title.png" alt="디자인팀타이틀">
+            <div class="disign-inner">
+                <div class="disign-text-wrap">
+                    <h2>MINISO<br>DESIGN<br>ACADEMY</h2>
+                    <p>미니소는 ‘더 나은 디자인, 더 나은 삶’이라는<br>
+                        철학을 바탕으로 독창적인 디자인을 추구하며,<br>
+                        전 세계의 뛰어난 디자인 역량을 모으고 있습니다.<br>
+                        트렌드를 반영한 차별화된<br>
+                        제품으로 글로벌 비전을 실현하고, 전 세계 고객에게<br>
+                        더 좋은 품질의 제품을 합리적인 가격에 제공합니다.</p>
+                        <a href="#"><img src="images/more_btn_yellow.png" alt="더보기버튼"></a>
+                </div>
+                <ul class="diagram">
+                    <li>
+                        <img src="images/circle_orange.png" alt="주황원">
+                        
+                    </li>
+                    <li>
+                        <img class="shape-hover" src="images/star_green (2).png" alt="초록별">
+                        <span class="hover-text kaiqi-huang" >KAIQI HUANG</span>
+
+                    </li>
+                    <li>
+                        <img class="shape-hover" src="images/square_purple.png" alt="보라네모">
+                        <span class="hover-text found">FOUND<br>&<br>FOUNDED</span>
+                    </li>
+                    <li>
+                        <img class="shape-hover" src="images/semicircle_yellow.png" alt="노랑반원">
+                        <span class="hover-text lucas">LUCAS<br>&<br>LUCAS</span>
+                    </li>
+                    <li>
+                        <img src="images/semicircle_pink.png" alt="핑크반원">
+                    </li>
+                    <li>
+                        <img class="shape-hover" src="images/long_circle_yellow.png" alt="노랑긴원">
+                        <span class="hover-text pantagon">PANTAGON</span>
+                    </li>
+                    <li>'
+                        <img src="images/circle_blue.png" alt="하늘색원">
+                    </li>
+                    <li>
+                        <img class="shape-hover" src="images/semicircle_blue (1).png" alt="하늘색반원">
+                        <span class="hover-text zan">ZAN DESIGN</span>
+                        
+                    </li>
+                    <li>
+                        <img class="shape-hover" src="images/circle_purple.png" alt="보라색원">
+                        <span class="hover-text arni">ARNI<br>&<br>SAULI</span>
+                    </li>
+                    <li>
+                        <img src="images/star_green2.png" alt="초록색별">
+                    </li>
+                    <li>
+                        <img class="shape-hover" src="images/square_pink2.png" alt="핑크네모">
+                        <span class="hover-text bambu">BAMBU<br>STUDIO</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer class="f-all">
+    <div class="f-bg">
+
+
+        <div class="f-wrap">
+            <div class="f-main">
+
+            <div class="f-brand">
+                <img src="images/footer_logo.png" alt="푸터로고">
+                <div class="f-contact">
+                <p>Franchise Inquiries</p>
+                <p class="email">Franchise@miniso.com</p>
+                </div>
+            </div>
+
+
+            <div class="f-inner">
+                <ul class="f-menu">
+
+                <li>
+                    <a href="#">IP Collaboration</a>
+                </li>
+                <li>
+                    <a href="#">Brand</a>
+                    <ul class="f-sub">
+                    <li><a href="#">Brand Profile</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Contact</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#">Store</a>
+                    <ul class="f-sub">
+                    <li><a href="#">Store Image</a></li>
+                    <li><a href="#">E-Shop</a></li>
+                    <li><a href="#">Global Market</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#">Social Responsibility</a>
+                    <ul class="f-sub">
+                    <li>
+                        <a href="#">Investors</a>
+                    </li>
+                    </ul>
+                </li>
+
+
+                </ul>
+            </div>
+
+            </div>
+            <div class="copy">
+            <p>Privacy Policy | Copyright © 2026 MINISO(GUANGZHOU)Co.</p>
+            </div>
+            
+        </div>
+        </div>
+
+
+
+
+    </footer>
+</body>
+</html>
