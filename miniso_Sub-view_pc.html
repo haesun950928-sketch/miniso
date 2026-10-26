@@ -44,7 +44,7 @@
             let moveWidth = second.offsetLeft - first.offsetLeft;
 
             // 캐릭터 목록과 보이는 영역
-            let $slide = $(".character-slide");
+            let $slide = $(".character-list");
             let $list = $(".character-list");
 
             // prev 별 버튼 클릭
@@ -61,7 +61,7 @@
             $(".cha-button-next").click(function () {
 
                 let current = $slide.scrollLeft();
-                let maxScroll = $list.outerWidth(true) - $slide.innerWidth();
+                let maxScroll = $slide[0].scrollWidth - $slide[0].clientWidth;
 
                 // 최대 위치를 넘지 않도록 제한
                 let target = Math.min(maxScroll, current + moveWidth);
